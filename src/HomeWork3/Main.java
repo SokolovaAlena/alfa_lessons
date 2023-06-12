@@ -57,7 +57,6 @@ public class Main {
 
         //поиск по списку
         Coworkers.searchByName(coworkersList, "Sam");
-        System.out.printf("lzlzlzl %s hhjhjh","Vasya");
 
     }
 
