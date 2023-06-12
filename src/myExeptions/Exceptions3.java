@@ -1,20 +1,17 @@
 package myExeptions;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Exceptions3 {
-    public static void main(String[] args)  {
-        //Checked exceptions (complite time exceptions) -- исключительные случаи работы программы. Программа не скомпилируется
-        //Unchecked exceptions (Runtime exceptions) --  ошибка в работе программы например  int x= 1/0;
+    //checked (compile time exceptions) = исключительные случаи работы программы. Они прописаны в спецификации
+    //класс Exception. Они требуют их обработки еще до компиляции. Кроме RunTimeException
+    //unchecked - runtime exceptions = ошибка в работе программы. Например ArrayIndexOutOfBoundsException -
+    //вышли за пределы массива; NullPointerException - попытка произвести действия с null
+    // ArithmeticException - например при попытке деления на 0; Эти исключения не нужно обрабатывать, а нужно исправлять код
+    //программы, чтобы они не возникали. Это баги
 
-       // String name =null;
-        //name.length();
-
-        int [] arr = new int[4];
-        System.out.println(arr[2]);
-
-
+    public static void main(String[] args) {
+      int x = 1/0;
     }
 }

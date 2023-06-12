@@ -8,7 +8,7 @@ public class Main {
 
         //создать сотрудников
         Worker worker1 = new Worker("Bob", 25);
-        Lawyer lawyer = new Lawyer("Boris", 41);
+        Lawyer lawyer = new Lawyer("Boris", 41, 2);
         Worker worker2 = new Worker("John", 33, 20);
         Manager manager1 = new Manager("Sam", 30, 23);
         Manager manager2 = new Manager("Tomas", 18);
