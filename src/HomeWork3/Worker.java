@@ -2,7 +2,7 @@ package HomeWork3;
 
 public class Worker extends Coworkers implements Bonus {
 
-    public Worker(String name, int age, int experience) {
+    public Worker(String name, int age, int experience) throws MyExceptions, YoungAgeException {
         super(name, age, experience);
         this.position = "Worker";
         salary=500;

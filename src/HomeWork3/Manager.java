@@ -1,7 +1,7 @@
 package HomeWork3;
 
 public class Manager extends Coworkers implements Bonus {
-    public Manager(String name, int age, int experience) {
+    public Manager(String name, int age, int experience) throws MyExceptions, YoungAgeException {
         super(name, age, experience);
         this.position = "Manager";
         this.salary = 1000;

@@ -1,7 +1,7 @@
 package HomeWork3;
 
 public class Lawyer extends Coworkers implements Grade {
-    public Lawyer(String name, int age, int experience) {
+    public Lawyer(String name, int age, int experience) throws MyExceptions {
         super(name, age, experience);
         salary = 20000;
         position = "Lawyer";

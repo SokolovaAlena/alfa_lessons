@@ -1,13 +1,13 @@
 package HomeWork3;
 
 public class Accountant extends Coworkers implements Grade {
-    public Accountant(String name, int age, int experience) {
+    public Accountant(String name, int age, int experience) throws MyExceptions, YoungAgeException {
         super(name, age, experience);
         salary = 10000;
         position = "Accountant";
     }
 
-    public Accountant(String name, int age) {
+    public Accountant(String name, int age)  {
         super(name, age);
         salary = 10000;
         position = "Accountant";

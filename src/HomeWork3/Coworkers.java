@@ -27,11 +27,21 @@ public abstract class Coworkers implements Comparable<Coworkers> {
         return name;
     }
 
-    public Coworkers(String name, int age, int experience) {
+    public Coworkers(String name, int age, int experience) throws MyExceptions {
         this.name = name;
         this.age = age;
         this.experience = experience;
         onWork = true;
+        if (age>75){
+            throw new OldAgeException("слишком старый");
+        }  else if (age<18){
+            throw new YoungAgeException("вечно молодой");
+        }
+        }
+
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public Coworkers(String name, int age) {
