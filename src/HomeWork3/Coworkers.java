@@ -16,9 +16,11 @@ public abstract class Coworkers implements Comparable<Coworkers> {
     public int getExperience() {
         return experience;
     }
+
     public void setExperience(int experience) {
         this.experience = experience;
     }
+
     public double getSalaryWithBonus() {
         return salaryWithBonus;
     }
@@ -32,12 +34,12 @@ public abstract class Coworkers implements Comparable<Coworkers> {
         this.age = age;
         this.experience = experience;
         onWork = true;
-        if (age>75){
+        if (age > 75) {
             throw new OldAgeException("слишком старый");
-        }  else if (age<18){
+        } else if (age < 18) {
             throw new YoungAgeException("вечно молодой");
         }
-        }
+    }
 
 
     public void setAge(int age) {
@@ -86,18 +88,18 @@ public abstract class Coworkers implements Comparable<Coworkers> {
 
     }
 
-    public static void searchByName(ArrayList<Coworkers> list, String name){
-        ArrayList <Coworkers> tempArray= new ArrayList<>();
+    public static void searchByName(ArrayList<Coworkers> list, String name) {
+        ArrayList<Coworkers> tempArray = new ArrayList<>();
         for (int i = 0; i < list.size(); i++) {
-            if (list.get(i).getName()==name){
+            if (list.get(i).getName() == name) {
                 tempArray.add(list.get(i));
             }
         }
-        if (tempArray.size()==0){
+        if (tempArray.size() == 0) {
             System.out.println("Сотрудник не найден");
         } else {
-            System.out.printf("--------------------\nНайдено %d сотрудника\n",tempArray.size());
-            System.out.printf("Результат поиска сотрудников с именем %s::", name+"\n" +tempArray);
+            System.out.printf("--------------------\nНайдено %d сотрудника\n", tempArray.size());
+            System.out.printf("Результат поиска сотрудников с именем %s::", name + "\n" + tempArray);
 
         }
     }

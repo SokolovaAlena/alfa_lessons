@@ -5,10 +5,10 @@ import java.util.ArrayList;
 
 public class TEST {
     public static void main(String[] args) {
-        ArrayList <Coworkers> testArray = new ArrayList<>();
-        System.out.println(testArray.size());
-        Worker worker888 = new Worker("Ghhh",12);
-        testArray.add(0, worker888);
-        System.out.println(testArray.size());
+        double random = Math.random();
+        System.out.println(random);
+
+        double roundOff = Math.round(random * 100.00) / 1000.0;
+        System.out.println(roundOff);
     }
 }
