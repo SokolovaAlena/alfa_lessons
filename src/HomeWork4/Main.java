@@ -10,26 +10,22 @@ public class Main {
              worker1= new Worker("Vasya",25,5);
         } catch (MyExceptions e) {
             e.printStackTrace();
-            System.out.println("-----------------------------------\n-----------------------------------");
         } catch (EmptyNameException e) {
             e.printStackTrace();
-            System.out.println("-----------------------------------\n-----------------------------------");
         }
 
         Manager manager1 = null;
         try {
-            manager1 = new Manager("", 73, 10);
+            manager1 = new Manager("111", 73, 10);
         } catch (MyExceptions | EmptyNameException e) {
             e.printStackTrace();
-            System.out.println("-----------------------------------\n-----------------------------------");
         }
 
         Accountant accountant1 = null;
         try {
-           accountant1 = new Accountant("Alla", 78, 5);
+           accountant1 = new Accountant("Alla", 55, 5);
         } catch (MyExceptions| EmptyNameException e) {
             e.printStackTrace();
-            System.out.println("-----------------------------------\n-----------------------------------");
         }
 
 
