@@ -3,11 +3,11 @@ package HomeWork4;
 import HomeWork3.YoungAgeException;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws MyExceptions {
         //создать сотрудников
-        Worker worker1=null;
+        Worker worker1 = null;
         try {
-             worker1= new Worker("Vasya",25,5);
+            worker1 = new Worker("111", 22, 5);
         } catch (MyExceptions e) {
             e.printStackTrace();
         } catch (EmptyNameException e) {
@@ -23,18 +23,26 @@ public class Main {
 
         Accountant accountant1 = null;
         try {
-           accountant1 = new Accountant("Alla", 55, 5);
-        } catch (MyExceptions| EmptyNameException e) {
+            accountant1 = new Accountant("Alla", 55, 5);
+        } catch (MyExceptions | EmptyNameException e) {
             e.printStackTrace();
         }
 
 
         worker1.getInfo();
-        worker1.setBonus(15.2);
+        try {
+            worker1.setBonus(15);
+        } catch (NegativeValueException e) {
+            e.printStackTrace();
+        }
         worker1.doWork();
         worker1.getInfo();
         accountant1.getInfo();
-        accountant1.setGradePremium(1);
+        try {
+            accountant1.setGradePremium(0);
+        } catch (WrongGradeException e) {
+            e.printStackTrace();
+        }
         accountant1.doWork();
         accountant1.getInfo();
         manager1.getInfo();

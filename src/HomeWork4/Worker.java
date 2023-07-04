@@ -11,8 +11,11 @@ public class Worker extends Coworkers{
         salaryWithBonus=salary;
     }
 
-    public void setBonus(double bonus) {
+    public void setBonus(double bonus) throws MyExceptions {
         this.bonus = bonus;
+        if (bonus<=0){
+            throw new NegativeValueException("bonus cannot be negative");
+        }
     }
 
     public void doWork(){
